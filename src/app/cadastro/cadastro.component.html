@@ -1,0 +1,56 @@
+<mat-card class="card-cadastro">
+  <mat-card-title>Cadastro de carro</mat-card-title>
+  <mat-card-content>
+    <form>
+      <div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill>
+          <mat-form-field>
+            <mat-label> Marca </mat-label>
+            <mat-select [(value)]="carro.marca">
+              <mat-option value='GM' >GM</mat-option>
+              <mat-option value='Volkswagem' >Volkswagem</mat-option>
+              <mat-option value='Fiat' >Fiat</mat-option>
+              <mat-option value='BMW' >BMW</mat-option>
+              <mat-option value='Mercedes' >Mercedes</mat-option>
+              <mat-option value='Audi' >Audi</mat-option>
+              <mat-option value='Ferrari' >Ferrari</mat-option>
+              <mat-option value='Porche' >Porche</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label> Modelo </mat-label>
+            <input type='text' matInput [(ngModel)]="carro.modelo" name="mode">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label> Ano </mat-label>
+            <input type='number' matInput [(ngModel)]="carro.ano" name="ano">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label> Cor </mat-label>
+            <input type='cor' matInput [(ngModel)]="carro.cor" name="cor">
+          </mat-form-field>  
+      </div>
+      <div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill>
+          <mat-form-field>
+            <mat-label> Potencia cv</mat-label>
+            <input type='number' matInput [(ngModel)]="carro.potencia" name="potencia">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label> Motor </mat-label>
+            <input type='text' matInput [(ngModel)]="carro.motor" name="motor">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label> Tração </mat-label>
+            <mat-select [(value)]="carro.tracao">
+              <mat-option value='Dianteira' >Dianteira</mat-option>
+              <mat-option value='Traseira' >Traseira</mat-option>
+              <mat-option value='4x4' >4x4</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-footer class="card-footer">
+    <button *ngIf="!isEditar" mat-raised-button class="button-success" (click)="cadastrar()">Cadastrar</button>
+    <button *ngIf="isEditar" mat-raised-button class="button-success" (click)="editar()">Editar</button>
+  </mat-card-footer>
+</mat-card>

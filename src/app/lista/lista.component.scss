@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+}
+
+.th-tr-lista {
+  padding: 20px;
+}
+
+.button-excluir {
+  background-color: red;
+  color: white;
+}
+
+.button-editar{
+  background-color: green;
+  color: white;
+  margin-left: 15px;
+}
+
+.button-add {
+  background-color: green;
+  color: white;
+}
+
+.div-button-add {
+  display: flex;
+  justify-content: right;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}

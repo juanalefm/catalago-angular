@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+form { margin: 5px;}
+
+mat-form-field{
+  margin: 15px;
+}
+
+.snackbar-green {
+  color: white;
+  background: green !important;
+}
+.snackbar-red {
+  color: white;
+  background: red !important;
+}
